@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "@taro-react-tools/configs/biome.json"
+    ]
+}

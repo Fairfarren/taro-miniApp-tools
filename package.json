@@ -1,17 +1,15 @@
 {
-  "name": "taro-miniApp-tools",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "check-types": "turbo run check-types"
-  },
-  "devDependencies": {
-    "turbo": "^2.5.2"
-  },
-  "packageManager": "pnpm@10.12.4",
-  "volta": {
-    "node": "20.19.3"
-  }
+	"name": "taro-miniApp-tools",
+	"private": true,
+	"scripts": {
+		"check-types": "turbo run check-types"
+	},
+	"devDependencies": {
+		"@taro-react-tools/configs": "workspace:*",
+		"turbo": "^2.5.2"
+	},
+	"packageManager": "pnpm@10.12.4",
+	"volta": {
+		"node": "20.19.3"
+	}
 }
