@@ -1,1 +1,1 @@
-export { DiyButton } from './DiyButton';
+export { DiyButton } from './DiyButton'
