@@ -1,22 +1,18 @@
 import type { CommonEventFunction } from '@tarojs/components'
 import { Image, ScrollView, View } from '@tarojs/components'
 import type Taro from '@tarojs/taro'
-import { useRouter, useShareAppMessage } from '@tarojs/taro'
+import { useShareAppMessage } from '@tarojs/taro'
 import classnames from 'classnames'
-import { useEffect, useMemo } from 'react'
-import iconLoading from './loading.svg'
+import { useMemo } from 'react'
+import iconLoading from './assets/loading.svg'
 
 interface ShareOption {
 	title: string
 	imageUrl: string
 	path: string
 }
-/**
- * 分享
- * @param props
- * @param {ShareOption} props.shareOption 分享的配置
- */
-export const Share = (props: {
+
+export interface ShareProps {
 	children: JSX.Element | JSX.Element[]
 	promise?: (e?: Taro.ShareAppMessageObject) => Promise<ShareOption>
 	shareOption?: {
@@ -27,9 +23,11 @@ export const Share = (props: {
 	onScrollToLower?: CommonEventFunction<object>
 	scrollLoading?: boolean
 	className?: string
-}) => {
-	const router = useRouter()
-
+}
+/**
+ * 分享
+ */
+export const Share = (props: ShareProps) => {
 	useShareAppMessage((e) => {
 		if (props.promise && e.from === 'button') return props.promise(e)
 
@@ -37,12 +35,6 @@ export const Share = (props: {
 			...props.shareOption,
 		}
 	})
-
-	useEffect(() => {
-		console.log('===router.params===')
-		console.table(router.params)
-		console.log('===router.params end===')
-	}, [])
 
 	const children = useMemo(() => props.children, [props])
 
