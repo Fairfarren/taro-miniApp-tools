@@ -5,6 +5,7 @@ import { useShareAppMessage } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useMemo } from 'react'
 import iconLoading from './assets/loading.svg'
+import styles from './index.module.scss'
 
 interface ShareOption {
 	title: string
@@ -41,10 +42,9 @@ export const Share = (props: ShareProps) => {
 	return (
 		<ScrollView
 			className={classnames(
-				'w-screen',
-				'h-screen',
-				'relative',
-				props.className,
+				'share-scroll',
+				styles.scrollView,
+				props.className
 			)}
 			scrollY
 			onScrollToLower={props?.onScrollToLower}
@@ -52,21 +52,17 @@ export const Share = (props: ShareProps) => {
 			{children}
 			<View
 				className={classnames(
-					'w-full',
-					'h-[280px]',
-					'flex',
-					'items-start',
-					'justify-center',
-					'fixed',
-					'bottom-0',
-					'left-0',
-					'transition',
-					!props.scrollLoading && '!-bottom-[300px]',
+					'share-scroll-container',
+					styles.bottomView,
+					!props.scrollLoading && styles.hideBottom
 				)}
 			>
 				<Image
 					src={iconLoading}
-					className={classnames('w-[80px]', 'h-[80px]')}
+					className={classnames(
+						'share-scroll-loading',
+						styles.loadingIcon,
+					)}
 				/>
 			</View>
 		</ScrollView>
