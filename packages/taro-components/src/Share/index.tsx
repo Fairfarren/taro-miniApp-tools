@@ -44,7 +44,7 @@ export const Share = (props: ShareProps) => {
 			className={classnames(
 				'share-scroll',
 				styles.scrollView,
-				props.className
+				props.className,
 			)}
 			scrollY
 			onScrollToLower={props?.onScrollToLower}
@@ -54,7 +54,7 @@ export const Share = (props: ShareProps) => {
 				className={classnames(
 					'share-scroll-container',
 					styles.bottomView,
-					!props.scrollLoading && styles.hideBottom
+					!props.scrollLoading && styles.hideBottom,
 				)}
 			>
 				<Image

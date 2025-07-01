@@ -54,6 +54,9 @@
 			},
 			"performance": {
 				"noDelete": "off"
+			},
+			"nursery": {
+				"useUniqueElementIds": "off"
 			}
 		}
 	}
