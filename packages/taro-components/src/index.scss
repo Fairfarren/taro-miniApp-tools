@@ -4,3 +4,7 @@
   padding-bottom: env(safe-area-inset-bottom);
   /*兼容 IOS>11.2*/
 }
+
+.bg-blur {
+  backdrop-filter: blur(32px);
+}

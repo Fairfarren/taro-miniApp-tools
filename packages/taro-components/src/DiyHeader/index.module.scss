@@ -1,0 +1,70 @@
+.diyHeader {
+    width: 100%;
+    color: #000;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+.headerTop {
+    width: 100%;
+}
+
+.headerMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerTitleBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    box-sizing: border-box;
+}
+
+.headerIcon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.headerTitle {
+    font-size: 35rpx;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.headerTitleWhite {
+    color: #fff;
+}
+
+.headerTitleBlack {
+    color: #000;
+}
+
+.headerTitlePlaceholder {
+    width: 40rpx;
+}
+
+.headerChildren {
+    width: 100%;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    box-sizing: border-box;
+    flex-shrink: 1;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.headerChildrenSpacer {
+    flex-shrink: 0;
+}
