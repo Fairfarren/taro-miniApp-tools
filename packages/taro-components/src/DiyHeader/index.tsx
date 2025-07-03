@@ -1,3 +1,4 @@
+import { View } from '@tarojs/components'
 import { getMenuButtonBoundingClientRect, navigateBack } from '@tarojs/taro'
 import classnames from 'classnames'
 import iconHome from './assets/home.png'
@@ -5,7 +6,6 @@ import iconBlackHome from './assets/home-black.png'
 import iconLeftBlack from './assets/left-black.png'
 import iconLeftWhite from './assets/left-white.png'
 import Style from './index.module.scss'
-import { View } from '@tarojs/components'
 
 export const pd = 8
 export const barData = getMenuButtonBoundingClientRect()
@@ -19,6 +19,7 @@ export interface DiyHeaderProps {
 	className?: string
 	needWhite?: boolean
 	backHome?: () => void
+	noBar?: boolean
 }
 
 /**
@@ -49,7 +50,7 @@ export function DiyHeader(props: DiyHeaderProps) {
 					className={Style.headerMain}
 					style={{ height: `${barData.height + pd}px` }}
 				>
-					{!!props.title ? (
+					{props.title ? (
 						<View className={Style.headerTitleBar}>
 							<img
 								className={Style.headerIcon}
@@ -82,10 +83,14 @@ export function DiyHeader(props: DiyHeaderProps) {
 							<View className={Style.headerChildren}>
 								{props.children}
 							</View>
-							<View
-								className={Style.headerChildrenSpacer}
-								style={{ width: `${barData.width}px` }}
-							/>
+							{!props.noBar ? (
+								<View
+									className={Style.headerChildrenSpacer}
+									style={{ width: `${barData.width}px` }}
+								/>
+							) : (
+								<></>
+							)}
 						</>
 					)}
 				</View>

@@ -5,7 +5,7 @@
 		"check-types": "turbo run check-types"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.6",
+        "@biomejs/biome": "^2.0.6",
 		"@taro-react-tools/configs": "workspace:*",
 		"turbo": "^2.5.2"
 	},
