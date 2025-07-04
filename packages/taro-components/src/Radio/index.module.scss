@@ -18,8 +18,8 @@ $default-color: #888888;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: var(--tac-radio-after-size, $size-after);
-        height: var(--tac-radio-after-size, $size-after);
+        width: var(--tac-radio-round-size, $size-after);
+        height: var(--tac-radio-round-size, $size-after);
     }
 }
 
