@@ -3,7 +3,6 @@ packages:
   - packages/*
 
 onlyBuiltDependencies:
-  - '@biomejs/biome'
   - '@parcel/watcher'
   - '@swc/core'
   - '@tarojs/binding'
@@ -14,5 +13,4 @@ onlyBuiltDependencies:
   - esbuild
   - fsevents
   - lefthook
-  - swiper
   - weapp-tailwindcss
