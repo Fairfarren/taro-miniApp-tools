@@ -11,7 +11,7 @@ const RadioGroup = (props: RadioGroupProps) => {
 
     useEffect(() => {
         value.setValue(props.value || '')
-    }, [])
+    }, [props.value])
 
     return <Context.Provider value={value}>{props.children}</Context.Provider>
 }
