@@ -20,5 +20,5 @@ export const useRadioContext = () => {
     if (!context) {
         throw new Error('没有useContext的参数')
     }
-    return context as ReturnType<typeof content>
+    return context as ReturnType<typeof radioContent>
 }
