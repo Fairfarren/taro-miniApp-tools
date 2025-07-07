@@ -1,13 +1,10 @@
 import { Button, type ButtonProps, type ITouchEvent } from '@tarojs/components'
-import type { CommonEventFunction } from '@tarojs/components/types/common'
 import { showToast } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useEffect, useState } from 'react'
 import Style from './index.module.scss'
 
-interface DiyButtonProps {
-    id?: string
-    onClick?: () => void
+export type DiyButtonProps = ButtonProps & {
     params?: object
     rules?: {
         [key: string]: {
@@ -15,9 +12,6 @@ interface DiyButtonProps {
             message: string
         }
     }
-    onGetPhoneNumber?: (
-        e: CommonEventFunction<ButtonProps.onGetPhoneNumberEventDetail>,
-    ) => void
     onError?: (key: string, message: string) => void
     errorKey?: string[]
 }
@@ -69,7 +63,6 @@ export function DiyButton(props: DiyButtonProps & ButtonProps) {
                 props.disabled && Style.disabled,
                 toastTitle && Style.disabled,
             )}
-            id={props.id}
             onClick={onClick}
             open-type={props.openType}
             hoverStartTime={0}
