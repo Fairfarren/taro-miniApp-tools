@@ -51,7 +51,7 @@ export function DiyButton(props: DiyButtonProps & ButtonProps) {
             return
         }
 
-        props.onClick?.()
+        props.onClick?.(e)
     }
 
     return (
