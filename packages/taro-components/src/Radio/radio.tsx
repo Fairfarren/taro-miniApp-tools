@@ -1,7 +1,7 @@
 import { View } from '@tarojs/components'
 import classnames from 'classnames'
 import Style from './index.module.scss'
-import { type RadioProps, useRadioContext } from './task'
+import { type RadioProps, useRadioContext } from './track'
 
 const Radio = (props: RadioProps) => {
     const { value } = useRadioContext()
