@@ -8,8 +8,12 @@
         "@biomejs/biome": "^2.1.1",
         "turbo": "^2.5.2"
     },
-    "packageManager": "pnpm@10.12.4",
+    "packageManager": "npm@11.4.2",
     "volta": {
         "node": "20.19.3"
-    }
+    },
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ]
 }
