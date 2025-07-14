@@ -13,4 +13,5 @@ onlyBuiltDependencies:
   - esbuild
   - fsevents
   - lefthook
+  - tailwindcss
   - weapp-tailwindcss
