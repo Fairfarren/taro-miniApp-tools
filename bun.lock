@@ -100,6 +100,7 @@
       "dependencies": {
         "@babel/runtime": "^7.24.4",
         "@nutui/nutui-react-taro": "^3.0.15",
+        "@tanstack/react-query": "^5.83.0",
         "@taro-react-tools/components": "*",
         "@tarojs/components": "4.1.2",
         "@tarojs/components-rn": "4.1.2",
@@ -1237,6 +1238,10 @@
     "@tailwindcss-mangle/config": ["@tailwindcss-mangle/config@5.1.0", "https://registry.npmmirror.com/@tailwindcss-mangle/config/-/config-5.1.0.tgz", { "dependencies": { "@tailwindcss-mangle/shared": "^4.1.0", "c12": "^2.0.4", "fs-extra": "^11.3.0", "is-css-request": "^1.0.1", "pathe": "^2.0.3" } }, "sha512-Q4RFHc8mq+WjaNA9K5uC7Tdp6IgeBB6L1rdbB/s9fJ6hrqcIYGpAuLIL21+4CO7JoDFKbaO4mKa2skF6f0yyLg=="],
 
     "@tailwindcss-mangle/shared": ["@tailwindcss-mangle/shared@4.1.0", "https://registry.npmmirror.com/@tailwindcss-mangle/shared/-/shared-4.1.0.tgz", {}, "sha512-HJN3yFDaG9D4bXlVLhPBcUpy6ddKET35LewWsqUR1RcjeTmHfcmbiQKjIN4p82Yl9GzsfrM1TsyEc+PCjO/TcQ=="],
+
+    "@tanstack/query-core": ["@tanstack/query-core@5.83.0", "https://registry.npmmirror.com/@tanstack/query-core/-/query-core-5.83.0.tgz", {}, "sha512-0M8dA+amXUkyz5cVUm/B+zSk3xkQAcuXuz5/Q/LveT4ots2rBpPTZOzd7yJa2Utsf8D2Upl5KyjhHRY+9lB/XA=="],
+
+    "@tanstack/react-query": ["@tanstack/react-query@5.83.0", "https://registry.npmmirror.com/@tanstack/react-query/-/react-query-5.83.0.tgz", { "dependencies": { "@tanstack/query-core": "5.83.0" }, "peerDependencies": { "react": "^18 || ^19" } }, "sha512-/XGYhZ3foc5H0VM2jLSD/NyBRIOK4q9kfeml4+0x2DlL6xVuAcVEW+hTlTapAmejObg0i3eNqhkr2dT+eciwoQ=="],
 
     "@taro-react-tools/components": ["@taro-react-tools/components@workspace:packages/taro-components"],
 
