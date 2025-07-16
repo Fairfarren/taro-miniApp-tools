@@ -41,8 +41,11 @@ export function DiyButton(props: DiyButtonProps & ButtonProps) {
         e.stopPropagation()
 
         if (toastTitle) {
-            if (props.errorKey?.includes(key)) props?.onError?.(key, toastTitle)
-            else showToast({ title: toastTitle })
+            if (props.errorKey?.includes(key)) {
+                props?.onError?.(key, toastTitle)
+            } else {
+                showToast({ title: toastTitle })
+            }
 
             return
         }

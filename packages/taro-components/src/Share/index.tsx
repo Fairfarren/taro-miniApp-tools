@@ -1,6 +1,5 @@
 import { Image, ScrollView, View } from '@tarojs/components'
-import type Taro from '@tarojs/taro'
-import { useShareAppMessage } from '@tarojs/taro'
+import { useShareAppMessage, type ShareAppMessageObject } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useMemo, useState } from 'react'
 import iconLoading from './assets/loading.svg'
@@ -14,7 +13,7 @@ interface ShareOption {
 
 export interface ShareProps {
     children: JSX.Element | JSX.Element[]
-    promise?: (e?: Taro.ShareAppMessageObject) => Promise<ShareOption>
+    promise?: (e?: ShareAppMessageObject) => Promise<ShareOption>
     shareOption?: {
         title?: string
         imageUrl?: string
@@ -32,7 +31,9 @@ export const Share = (props: ShareProps) => {
     const [refresherTriggered, setRefresherTriggered] = useState(false)
 
     useShareAppMessage((e) => {
-        if (props.promise && e.from === 'button') return props.promise(e)
+        if (props.promise && e.from === 'button') {
+            return props.promise(e)
+        }
 
         return {
             ...props.shareOption,

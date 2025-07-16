@@ -28,8 +28,11 @@ export interface DiyHeaderProps {
 export function DiyHeader(props: DiyHeaderProps) {
     function iconLeftOnClick(e: { stopPropagation: () => void }) {
         e.stopPropagation()
-        if (props.isShare) props?.backHome?.()
-        else navigateBack()
+        if (props.isShare) {
+            props?.backHome?.()
+        } else {
+            navigateBack()
+        }
     }
 
     return (
