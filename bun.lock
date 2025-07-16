@@ -82,8 +82,8 @@
         "eslint-plugin-react-hooks": "^4.4.0",
         "gulp": "^4.0.2",
         "gulp-zip": "^5.1.0",
+        "husky": "^9.1.7",
         "inquirer": "^8.2.6",
-        "lefthook": "^1.11.14",
         "lint-staged": "^13.3.0",
         "postcss-rem-to-responsive-pixel": "^6.0.1",
         "react-refresh": "^0.14.0",
@@ -170,8 +170,8 @@
         "eslint-plugin-react-hooks": "^4.4.0",
         "gulp": "^4.0.2",
         "gulp-zip": "^5.1.0",
+        "husky": "^9.1.7",
         "inquirer": "^8.2.6",
-        "lefthook": "^1.11.14",
         "lint-staged": "^13.3.0",
         "postcss-rem-to-responsive-pixel": "^6.0.1",
         "react-refresh": "^0.14.0",
@@ -2949,6 +2949,8 @@
 
     "humps": ["humps@2.0.1", "https://registry.npmmirror.com/humps/-/humps-2.0.1.tgz", {}, "sha512-E0eIbrFWUhwfXJmsbdjRQFQPrl5pTEoKlz163j1mTqqUnU9PgR4AgB8AIITzuB3vLBdxZXyZ9TDIrwB2OASz4g=="],
 
+    "husky": ["husky@9.1.7", "https://registry.npmmirror.com/husky/-/husky-9.1.7.tgz", { "bin": { "husky": "bin.js" } }, "sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA=="],
+
     "iconv-lite": ["iconv-lite@0.4.24", "https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.4.24.tgz", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3" } }, "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="],
 
     "ics": ["ics@3.8.1", "https://registry.npmmirror.com/ics/-/ics-3.8.1.tgz", { "dependencies": { "nanoid": "^3.1.23", "runes2": "^1.1.2", "yup": "^1.2.0" } }, "sha512-UqQlfkajfhrS4pUGQfGIJMYz/Jsl/ob3LqcfEhUmLbwumg+ZNkU0/6S734Vsjq3/FYNpEcZVKodLBoe+zBM69g=="],
@@ -3278,28 +3280,6 @@
     "lcid": ["lcid@1.0.0", "https://registry.npmmirror.com/lcid/-/lcid-1.0.0.tgz", { "dependencies": { "invert-kv": "^1.0.0" } }, "sha512-YiGkH6EnGrDGqLMITnGjXtGmNtjoXw9SVUzcaos8RBi7Ps0VBylkq+vOcY9QE5poLasPCR849ucFUkl0UzUyOw=="],
 
     "lead": ["lead@1.0.0", "https://registry.npmmirror.com/lead/-/lead-1.0.0.tgz", { "dependencies": { "flush-write-stream": "^1.0.2" } }, "sha512-IpSVCk9AYvLHo5ctcIXxOBpMWUe+4TKN3VPWAKUbJikkmsGp0VrSM8IttVc32D6J4WUsiPE6aEFRNmIoF/gdow=="],
-
-    "lefthook": ["lefthook@1.12.2", "https://registry.npmmirror.com/lefthook/-/lefthook-1.12.2.tgz", { "optionalDependencies": { "lefthook-darwin-arm64": "1.12.2", "lefthook-darwin-x64": "1.12.2", "lefthook-freebsd-arm64": "1.12.2", "lefthook-freebsd-x64": "1.12.2", "lefthook-linux-arm64": "1.12.2", "lefthook-linux-x64": "1.12.2", "lefthook-openbsd-arm64": "1.12.2", "lefthook-openbsd-x64": "1.12.2", "lefthook-windows-arm64": "1.12.2", "lefthook-windows-x64": "1.12.2" }, "bin": { "lefthook": "bin/index.js" } }, "sha512-2CeTu5NcmoT9YnqsHTq/TF36MlqlzHzhivGx3DrXHwcff4TdvrkIwUTA56huM3Nlo5ODAF/0hlPzaKLmNHCBnQ=="],
-
-    "lefthook-darwin-arm64": ["lefthook-darwin-arm64@1.12.2", "https://registry.npmmirror.com/lefthook-darwin-arm64/-/lefthook-darwin-arm64-1.12.2.tgz", { "os": "darwin", "cpu": "arm64" }, "sha512-fTxeI9tEskrHjc3QyEO+AG7impBXY2Ed8V5aiRc3fw9POfYtVh9b5jRx90fjk2+ld5hf+Z1DsyyLq/vOHDFskQ=="],
-
-    "lefthook-darwin-x64": ["lefthook-darwin-x64@1.12.2", "https://registry.npmmirror.com/lefthook-darwin-x64/-/lefthook-darwin-x64-1.12.2.tgz", { "os": "darwin", "cpu": "x64" }, "sha512-T1dCDKAAfdHgYZ8qtrS02SJSHoR52RFcrGArFNll9Mu4ZSV19Sp8BO+kTwDUOcLYdcPGNaqOp9PkRBQGZWQC7g=="],
-
-    "lefthook-freebsd-arm64": ["lefthook-freebsd-arm64@1.12.2", "https://registry.npmmirror.com/lefthook-freebsd-arm64/-/lefthook-freebsd-arm64-1.12.2.tgz", { "os": "freebsd", "cpu": "arm64" }, "sha512-2n9z7Q4BKeMBoB9cuEdv0UBQH82Z4GgBQpCrfjCtyzpDnYQwrH8Tkrlnlko4qPh9MM6nLLGIYMKsA5nltzo8Cg=="],
-
-    "lefthook-freebsd-x64": ["lefthook-freebsd-x64@1.12.2", "https://registry.npmmirror.com/lefthook-freebsd-x64/-/lefthook-freebsd-x64-1.12.2.tgz", { "os": "freebsd", "cpu": "x64" }, "sha512-1hNY/irY+/3kjRzKoJYxG+m3BYI8QxopJUK1PQnknGo1Wy5u302SdX+tR7pnpz6JM5chrNw4ozSbKKOvdZ5VEw=="],
-
-    "lefthook-linux-arm64": ["lefthook-linux-arm64@1.12.2", "https://registry.npmmirror.com/lefthook-linux-arm64/-/lefthook-linux-arm64-1.12.2.tgz", { "os": "linux", "cpu": "arm64" }, "sha512-1W4swYIVRkxq/LFTuuK4oVpd6NtTKY4E3VY2Uq2JDkIOJV46+8qGBF+C/QA9K3O9chLffgN7c+i+NhIuGiZ/Vw=="],
-
-    "lefthook-linux-x64": ["lefthook-linux-x64@1.12.2", "https://registry.npmmirror.com/lefthook-linux-x64/-/lefthook-linux-x64-1.12.2.tgz", { "os": "linux", "cpu": "x64" }, "sha512-J6VGuMfhq5iCsg1Pv7xULbuXC63gP5LaikT0PhkyBNMi3HQneZFDJ8k/sp0Ue9HkQv6QfWIo3/FgB9gz38MCFw=="],
-
-    "lefthook-openbsd-arm64": ["lefthook-openbsd-arm64@1.12.2", "https://registry.npmmirror.com/lefthook-openbsd-arm64/-/lefthook-openbsd-arm64-1.12.2.tgz", { "os": "openbsd", "cpu": "arm64" }, "sha512-wncDRW3ml24DaOyH22KINumjvCohswbQqbxyH2GORRCykSnE859cTjOrRIchTKBIARF7PSeGPUtS7EK0+oDbaw=="],
-
-    "lefthook-openbsd-x64": ["lefthook-openbsd-x64@1.12.2", "https://registry.npmmirror.com/lefthook-openbsd-x64/-/lefthook-openbsd-x64-1.12.2.tgz", { "os": "openbsd", "cpu": "x64" }, "sha512-2jDOkCHNnc/oK/vR62hAf3vZb1EQ6Md2GjIlgZ/V7A3ztOsM8QZ5IxwYN3D1UOIR5ZnwMBy7PtmTJC/HJrig5w=="],
-
-    "lefthook-windows-arm64": ["lefthook-windows-arm64@1.12.2", "https://registry.npmmirror.com/lefthook-windows-arm64/-/lefthook-windows-arm64-1.12.2.tgz", { "os": "win32", "cpu": "arm64" }, "sha512-ZMH/q6UNSidhHEG/1QoqIl1n4yPTBWuVmKx5bONtKHicoz4QCQ+QEiNjKsG5OO4C62nfyHGThmweCzZVUQECJw=="],
-
-    "lefthook-windows-x64": ["lefthook-windows-x64@1.12.2", "https://registry.npmmirror.com/lefthook-windows-x64/-/lefthook-windows-x64-1.12.2.tgz", { "os": "win32", "cpu": "x64" }, "sha512-TqT2jIPcTQ9uwaw+v+DTmvnUHM/p7bbsSrPoPX+fRXSGLzFjyiY+12C9dObSwfCQq6rT70xqQJ9AmftJQsa5/Q=="],
 
     "less": ["less@4.3.0", "https://registry.npmmirror.com/less/-/less-4.3.0.tgz", { "dependencies": { "copy-anything": "^2.0.1", "parse-node-version": "^1.0.1", "tslib": "^2.3.0" }, "optionalDependencies": { "errno": "^0.1.1", "graceful-fs": "^4.1.2", "image-size": "~0.5.0", "make-dir": "^2.1.0", "mime": "^1.4.1", "needle": "^3.1.0", "source-map": "~0.6.0" }, "bin": { "lessc": "bin/lessc" } }, "sha512-X9RyH9fvemArzfdP8Pi3irr7lor2Ok4rOttDXBhlwDg+wKQsXOXgHWduAJE1EsF7JJx0w0bcO6BC6tCKKYnXKA=="],
 
