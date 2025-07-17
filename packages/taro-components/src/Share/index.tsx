@@ -1,8 +1,7 @@
 import { Image, ScrollView, View } from '@tarojs/components'
-import { useShareAppMessage, type ShareAppMessageObject } from '@tarojs/taro'
+import { type ShareAppMessageObject, useShareAppMessage } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useMemo, useState } from 'react'
-import iconLoading from './assets/loading.svg'
 import styles from './index.module.scss'
 
 interface ShareOption {
@@ -23,6 +22,7 @@ export interface ShareProps {
     scrollLoading?: boolean
     onRefresherPulling?: () => void
     className?: string
+    loadingImg?: string
 }
 /**
  * 分享
@@ -75,7 +75,7 @@ export const Share = (props: ShareProps) => {
                 )}
             >
                 <Image
-                    src={iconLoading}
+                    src={props.loadingImg || ''}
                     className={classnames(
                         'share-scroll-loading',
                         styles.loadingIcon,
