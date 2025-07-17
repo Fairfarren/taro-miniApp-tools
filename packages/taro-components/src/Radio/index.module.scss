@@ -10,6 +10,7 @@ $default-color: #888888;
     background-color: #ffffff;
     border-radius: 9999px;
     position: relative;
+    flex-shrink: 0;
 
     &::after {
         content: '';
