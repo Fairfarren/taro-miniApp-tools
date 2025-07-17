@@ -20,7 +20,7 @@ export interface ShareProps {
     }
     onScrollToLower?: () => void
     scrollLoading?: boolean
-    onRefresherPulling?: () => void
+    onRefresherPulling?: () => Promise<unknown>
     className?: string
     loadingImg?: string
 }
