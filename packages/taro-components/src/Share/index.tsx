@@ -2,7 +2,6 @@ import { Image, ScrollView, View } from '@tarojs/components'
 import { type ShareAppMessageObject, useShareAppMessage } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useMemo, useState } from 'react'
-import { useMinStayTime } from '../utils'
 import styles from './index.module.scss'
 
 interface ShareOption {
@@ -30,7 +29,6 @@ export interface ShareProps {
  */
 export const Share = (props: ShareProps) => {
     const [refresherTriggered, setRefresherTriggered] = useState(false)
-    const { minStayTime } = useMinStayTime()
 
     useShareAppMessage((e) => {
         if (props.promise && e.from === 'button') {
