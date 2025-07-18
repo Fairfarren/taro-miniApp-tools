@@ -2,6 +2,7 @@ import { Image, ScrollView, View } from '@tarojs/components'
 import { type ShareAppMessageObject, useShareAppMessage } from '@tarojs/taro'
 import classnames from 'classnames'
 import { useMemo, useState } from 'react'
+import { useMinStayTime } from '../utils'
 import styles from './index.module.scss'
 
 interface ShareOption {
@@ -29,6 +30,7 @@ export interface ShareProps {
  */
 export const Share = (props: ShareProps) => {
     const [refresherTriggered, setRefresherTriggered] = useState(false)
+    const { minStayTime } = useMinStayTime()
 
     useShareAppMessage((e) => {
         if (props.promise && e.from === 'button') {
@@ -52,21 +54,23 @@ export const Share = (props: ShareProps) => {
     }
 
     return (
-        <ScrollView
-            className={classnames(
-                'share-scroll',
-                styles.scrollView,
-                props.className,
-            )}
-            refresherEnabled={!!props?.onRefresherPulling}
-            refresherTriggered={refresherTriggered}
-            scrollY
-            onScrollToLower={props?.onScrollToLower}
-            onRefresherPulling={() => {
-                onRefresherPulling()
-            }}
-        >
-            {children}
+        <>
+            <ScrollView
+                className={classnames(
+                    'share-scroll',
+                    styles.scrollView,
+                    props.className,
+                )}
+                refresherEnabled={!!props?.onRefresherPulling}
+                refresherTriggered={refresherTriggered}
+                scrollY
+                onScrollToLower={props?.onScrollToLower}
+                onRefresherPulling={() => {
+                    onRefresherPulling()
+                }}
+            >
+                {children}
+            </ScrollView>
             <View
                 className={classnames(
                     'share-scroll-container',
@@ -82,6 +86,6 @@ export const Share = (props: ShareProps) => {
                     )}
                 />
             </View>
-        </ScrollView>
+        </>
     )
 }
