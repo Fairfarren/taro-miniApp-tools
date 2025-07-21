@@ -54,6 +54,7 @@ export const Share = (props: ShareProps) => {
     return (
         <>
             <ScrollView
+                {...props}
                 className={classnames(
                     'share-scroll',
                     styles.scrollView,
@@ -62,6 +63,7 @@ export const Share = (props: ShareProps) => {
                 refresherEnabled={!!props?.onRefresherPulling}
                 refresherTriggered={refresherTriggered}
                 scrollY
+                scrollWithAnimation
                 onScrollToLower={props?.onScrollToLower}
                 onRefresherPulling={() => {
                     onRefresherPulling()
