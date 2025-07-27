@@ -34,7 +34,7 @@ export const Share = (props: ShareProps) => {
 
     useShareAppMessage((e) => {
         if (props.promise && e.from === 'button') {
-            return props.promise(e)
+            return props.promise(e) as Promise<ShareOption>
         }
 
         return {
