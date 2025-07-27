@@ -12,7 +12,9 @@ interface ShareOption {
 
 export interface ShareProps {
     children: JSX.Element | JSX.Element[]
-    promise?: (e?: ShareAppMessageObject) => Promise<ShareOption>
+    promise?: (
+        e?: ShareAppMessageObject,
+    ) => Promise<ShareOption | undefined> | ShareOption
     shareOption?: {
         title?: string
         imageUrl?: string
