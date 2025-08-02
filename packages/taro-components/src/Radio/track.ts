@@ -18,7 +18,7 @@ export const Context = createContext<unknown>(undefined)
 export const useRadioContext = () => {
     const context = useContext(Context)
     if (!context) {
-        throw new Error('请没喝RadioGroup一起使用')
+        throw new Error('请和RadioGroup一起使用')
     }
     return context as ReturnType<typeof radioContent>
 }
