@@ -3,6 +3,9 @@
   "workspaces": {
     "": {
       "name": "taro-miniApp-tools",
+      "dependencies": {
+        "query-string": "^9.2.2",
+      },
       "devDependencies": {
         "@prettier/plugin-oxc": "^0.0.4",
         "oxlint": "^1.6.0",
