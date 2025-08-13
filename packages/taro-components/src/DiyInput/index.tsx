@@ -1,6 +1,12 @@
-import { Input, Text, View } from '@tarojs/components'
+import { Input, type InputProps, Text, View } from '@tarojs/components'
 import classnames from 'classnames'
-import { type ReactNode, useDeferredValue, useState } from 'react'
+import {
+    type ReactNode,
+    useDeferredValue,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
 import Style from './index.module.scss'
 
 export function DiyInput(props: {
@@ -15,8 +21,11 @@ export function DiyInput(props: {
     value?: string
     disabled?: boolean
     placeholder?: string
+    onInput?: (e: string) => void
 }) {
     const [isFocus, setIsFocus] = useState(props.focus || false)
+    const inputRef = useRef<InputProps>(null)
+    const timer = useRef<NodeJS.Timeout>()
 
     const deferredValue = useDeferredValue(props.value)
 
@@ -29,6 +38,18 @@ export function DiyInput(props: {
         props.onFocus?.()
         setIsFocus(true)
     }
+
+    useEffect(() => {
+        clearTimeout(timer.current)
+        timer.current = setTimeout(
+            () => {
+                if (inputRef.current) {
+                    inputRef.current.value = props.value || ''
+                }
+            },
+            isFocus ? 600 : 0,
+        )
+    }, [deferredValue])
 
     return (
         <View
@@ -44,12 +65,15 @@ export function DiyInput(props: {
             >
                 {props.before}
                 <Input
+                    ref={inputRef}
+                    maxlength={props.maxLength || 100}
                     className={Style.input}
                     name={props.name}
                     onBlur={onBlur}
                     onFocus={onFocus}
                     onClick={() => !props.disabled && setIsFocus(true)}
                     placeholder={props.placeholder}
+                    onInput={(e) => props.onInput?.(e.detail.value)}
                 />
                 {props.after}
                 {props.maxLength && (
@@ -61,7 +85,7 @@ export function DiyInput(props: {
                             'text-green',
                         )}
                     >
-                        {deferredValue?.length}/{props.maxLength}
+                        {deferredValue?.length || 0}/{props.maxLength}
                     </Text>
                 )}
             </View>
