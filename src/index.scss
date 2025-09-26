@@ -1,0 +1,11 @@
+.occupy-bottom {
+    padding-bottom: constant(safe-area-inset-bottom);
+    /*兼容 IOS<11.2*/
+    padding-bottom: env(safe-area-inset-bottom);
+    /*兼容 IOS>11.2*/
+}
+
+.bg-blur {
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+}

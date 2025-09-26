@@ -1,0 +1,27 @@
+.scrollView {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bottomView {
+    width: 100%;
+    height: 280rpx;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: bottom 0.3s;
+    user-select: none;
+}
+
+.hideBottom {
+    bottom: -300rpx !important;
+}
+
+.loadingIcon {
+    width: 80rpx;
+    height: 80rpx;
+}

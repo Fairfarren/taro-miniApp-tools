@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 34px;
+    padding: 0;
+    margin: 0;
+
+    &:after {
+        border: none;
+    }
+}
+
+.disabled {
+    filter: grayscale(100%);
+}
